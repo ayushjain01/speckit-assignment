@@ -18,15 +18,15 @@
 
 **Purpose**: Initialize the standalone JavaScript Next.js frontend described in the plan.
 
-- [ ] T001 Scaffold the JavaScript Next.js App Router project and install its dependencies under `frontend/`, producing `frontend/package.json`, `frontend/app/`, and `frontend/public/`.
-- [ ] T002 Remove scaffolded starter content and set the application title and shared page metadata in `frontend/app/layout.js`.
+- [X] T001 Scaffold the JavaScript Next.js App Router project and install its dependencies under `frontend/`, producing `frontend/package.json`, `frontend/app/`, and `frontend/public/`.
+- [X] T002 Remove scaffolded starter content and set the application title and shared page metadata in `frontend/app/layout.js`.
 
 ## Phase 2: Foundational
 
 **Purpose**: Establish the shared responsive, accessible page foundation required by all stories.
 
-- [ ] T003 Define global typography, color tokens, page layout, responsive breakpoints, and visible keyboard-focus styles in `frontend/app/globals.css`.
-- [ ] T004 Add the semantic application shell and load global styles from `frontend/app/layout.js`.
+- [X] T003 Define global typography, color tokens, page layout, responsive breakpoints, and visible keyboard-focus styles in `frontend/app/globals.css`.
+- [X] T004 Add the semantic application shell and load global styles from `frontend/app/layout.js`.
 
 **Checkpoint**: Project shell and shared responsive styles are ready before story-specific dashboard work.
 
@@ -38,11 +38,11 @@
 
 ### Implementation for User Story 1
 
-- [ ] T005 [US1] Create several consecutive illustrative readiness-day records with dated metric values, explicit missing readings, workout context, and pace-comparability flags in `frontend/data/readiness.js`.
-- [ ] T006 [US1] Build the dashboard's dated multi-day readiness view for energy, sleep quality, resting heart rate, heart-rate recovery, soreness, perceived effort, and pace in `frontend/components/ReadinessDashboard.jsx`.
-- [ ] T007 [US1] Render metric units or rating labels, date context, and explicit unavailable-value presentation without substituting favorable-looking numbers in `frontend/components/ReadinessDashboard.jsx`.
-- [ ] T008 [US1] Add a chart-like, responsive comparison of the mock readings with accessible labels and a narrow-screen layout in `frontend/components/ReadinessDashboard.jsx`.
-- [ ] T009 [US1] Render the dashboard component from the home page in `frontend/app/page.js`.
+- [X] T005 [US1] Create several consecutive illustrative readiness-day records with dated metric values, explicit missing readings, workout context, and pace-comparability flags in `frontend/data/readiness.js`.
+- [X] T006 [US1] Build the dashboard's dated multi-day readiness view for energy, sleep quality, resting heart rate, heart-rate recovery, soreness, perceived effort, and pace in `frontend/components/ReadinessDashboard.jsx`.
+- [X] T007 [US1] Render metric units or rating labels, date context, and explicit unavailable-value presentation without substituting favorable-looking numbers in `frontend/components/ReadinessDashboard.jsx`.
+- [X] T008 [US1] Add a chart-like, responsive comparison of the mock readings with accessible labels and a narrow-screen layout in `frontend/components/ReadinessDashboard.jsx`.
+- [X] T009 [US1] Render the dashboard component from the home page in `frontend/app/page.js`.
 
 **Checkpoint**: User Story 1 independently demonstrates a multi-day readiness dashboard with correctly distinguished missing data.
 
@@ -54,10 +54,10 @@
 
 ### Implementation for User Story 2
 
-- [ ] T010 [P] [US2] Create the labeled morning check-in form with separate whole-number energy and soreness fields constrained to 1–5 in `frontend/components/MorningCheckIn.jsx`.
-- [ ] T011 [US2] Add required-value and 1–5 range validation with visible, field-specific feedback and no state update on invalid input in `frontend/components/MorningCheckIn.jsx`.
-- [ ] T012 [US2] Connect valid check-in submissions to selected-day browser-session state and show a confirmation identifying the updated day in `frontend/components/ReadinessDashboard.jsx`.
-- [ ] T013 [US2] Display saved energy and soreness ratings in the matching dated multi-day readings in `frontend/components/ReadinessDashboard.jsx`.
+- [X] T010 [P] [US2] Create the labeled morning check-in form with separate whole-number energy and soreness fields constrained to 1–5 in `frontend/components/MorningCheckIn.jsx`.
+- [X] T011 [US2] Add required-value and 1–5 range validation with visible, field-specific feedback and no state update on invalid input in `frontend/components/MorningCheckIn.jsx`.
+- [X] T012 [US2] Connect valid check-in submissions to selected-day browser-session state and show a confirmation identifying the updated day in `frontend/components/ReadinessDashboard.jsx`.
+- [X] T013 [US2] Display saved energy and soreness ratings in the matching dated multi-day readings in `frontend/components/ReadinessDashboard.jsx`.
 
 **Checkpoint**: User Story 2 can be demonstrated through the dashboard without a backend; valid changes are session-only.
 
@@ -69,11 +69,11 @@
 
 ### Implementation for User Story 3
 
-- [ ] T014 [P] [US3] Implement three-day worsening comparisons using lower energy, sleep quality, or heart-rate recovery and higher soreness, resting heart rate, or perceived effort as worsening; count slower pace only when workouts are marked comparable in `frontend/lib/fatigueTrend.js`.
-- [ ] T015 [US3] Return an insufficient-data state when three consecutive days or comparable first/last readings are unavailable, and do not count missing readings as favorable or worsening in `frontend/lib/fatigueTrend.js`.
-- [ ] T016 [P] [US3] Create an informational fatigue insight that names contributing indicators, displays first/middle/final-day context, and offers continue, shorten, slow down, and lower-impact substitution options in `frontend/components/FatigueInsight.jsx`.
-- [ ] T017 [US3] Recompute the displayed trend when valid morning ratings change and render mixed evidence or insufficient history without asserting sustained worsening in `frontend/components/ReadinessDashboard.jsx`.
-- [ ] T018 [US3] Add browser-session selection and clear selection feedback for the four workout adjustment options without modifying a training plan in `frontend/components/FatigueInsight.jsx`.
+- [X] T014 [P] [US3] Implement three-day worsening comparisons using lower energy, sleep quality, or heart-rate recovery and higher soreness, resting heart rate, or perceived effort as worsening; count slower pace only when workouts are marked comparable in `frontend/lib/fatigueTrend.js`.
+- [X] T015 [US3] Return an insufficient-data state when three consecutive days or comparable first/last readings are unavailable, and do not count missing readings as favorable or worsening in `frontend/lib/fatigueTrend.js`.
+- [X] T016 [P] [US3] Create an informational fatigue insight that names contributing indicators, displays first/middle/final-day context, and offers continue, shorten, slow down, and lower-impact substitution options in `frontend/components/FatigueInsight.jsx`.
+- [X] T017 [US3] Recompute the displayed trend when valid morning ratings change and render mixed evidence or insufficient history without asserting sustained worsening in `frontend/components/ReadinessDashboard.jsx`.
+- [X] T018 [US3] Add browser-session selection and clear selection feedback for the four workout adjustment options without modifying a training plan in `frontend/components/FatigueInsight.jsx`.
 
 **Checkpoint**: User Story 3 demonstrates the sustained-worsening case, the no-pattern/insufficient-data cases, and all four non-prescriptive options.
 
@@ -81,10 +81,10 @@
 
 **Purpose**: Complete responsive and accessible behavior and validate the integrated prototype.
 
-- [ ] T019 [P] Ensure dashboard headings, input labels, error feedback, status messages, chart labels, and selected workout options are understandable to keyboard and assistive-technology users in `frontend/components/ReadinessDashboard.jsx` and `frontend/components/FatigueInsight.jsx`.
-- [ ] T020 [P] Refine narrow-screen dashboard, check-in, and workout-choice layouts without page-level horizontal scrolling in `frontend/app/globals.css`.
-- [ ] T021 Run the frontend lint and production build commands from `frontend/package.json` and resolve any feature-introduced failures.
-- [ ] T022 Validate the documented multi-day, missing-data, trend, check-in, invalid-entry, workout-choice, responsive, and keyboard scenarios in `specs/001-training-readiness/quickstart.md`.
+- [X] T019 [P] Ensure dashboard headings, input labels, error feedback, status messages, chart labels, and selected workout options are understandable to keyboard and assistive-technology users in `frontend/components/ReadinessDashboard.jsx` and `frontend/components/FatigueInsight.jsx`.
+- [X] T020 [P] Refine narrow-screen dashboard, check-in, and workout-choice layouts without page-level horizontal scrolling in `frontend/app/globals.css`.
+- [X] T021 Run the frontend lint and production build commands from `frontend/package.json` and resolve any feature-introduced failures.
+- [X] T022 Validate the documented multi-day, missing-data, trend, check-in, invalid-entry, workout-choice, responsive, and keyboard scenarios in `specs/001-training-readiness/quickstart.md`.
 
 ## Dependencies & Execution Order
 

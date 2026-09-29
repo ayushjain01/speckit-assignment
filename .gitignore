@@ -1,0 +1,24 @@
+# Dependencies and build output
+node_modules/
+.next/
+out/
+dist/
+build/
+
+# Local configuration and logs
+.env*
+*.log
+npm-debug.log*
+
+# Python environment used by repository tooling
+.venv/
+__pycache__/
+*.py[cod]
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp

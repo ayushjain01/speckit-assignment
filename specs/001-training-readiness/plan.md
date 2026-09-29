@@ -62,9 +62,13 @@ frontend/
 │   ├── layout.js
 │   └── page.js
 ├── components/
+│   ├── FatigueInsight.jsx
+│   ├── MorningCheckIn.jsx
 │   └── ReadinessDashboard.jsx
 ├── data/
 │   └── readiness.js
+├── lib/
+│   └── fatigueTrend.js
 ├── public/
 └── package.json
 ```
